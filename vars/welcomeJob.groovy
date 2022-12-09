@@ -1,3 +1,13 @@
 def call() {
- bat "echo hello world"
+ post {
+        success {
+            bat 'echo success'
+        }
+        failure {
+            bat 'echo fail'
+        }
+        unstable {
+            bat 'echo unstable'
+        }
+    }
 }
